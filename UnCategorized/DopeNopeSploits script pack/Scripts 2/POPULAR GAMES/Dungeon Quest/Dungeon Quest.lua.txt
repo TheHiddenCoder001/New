@@ -1,0 +1,10 @@
+{
+"Whitelist": "clout_tokens",
+"Difficulty": "Hard",
+"Hardcore":true,
+"Dungeon":"Winter Outpost",
+"AvoidBullets":false,
+"CaptainBlackbeardOffset":10,
+"SwitchDelay":3,
+"Target":"HumanoidRootPart"
+}

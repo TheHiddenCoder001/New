@@ -1,0 +1,3 @@
+All of these are FE compatible! Just open a script and insert it into your exploit, then execute!
+
+NOTE: [Need Tool] SCRIPTS MAY NEED TO BE EXECUTED A SECOND TIME IF NOT WORKING THE FIRST.

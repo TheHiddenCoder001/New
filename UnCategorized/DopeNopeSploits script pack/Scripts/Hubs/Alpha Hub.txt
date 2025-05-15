@@ -1,0 +1,4 @@
+-- 6 games
+-- bloxburg, lt2, mm2
+-- prison life, TOH, Natural Dis. Survival
+loadstring(game:HttpGet('http://alpha1004.tech/scripts/AlphaX.lua'))()

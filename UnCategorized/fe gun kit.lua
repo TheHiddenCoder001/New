@@ -1,0 +1,13 @@
+local v1 = require(game:GetService("Players").VampiricThoughts.Backpack.Railgun.Setting)
+v1.FireRate = 9
+v1.AmmoPerClip = 50
+v1.Clips = 90000
+v1.MaxClip = 9000000
+v1.FlamingBullet = true
+v1.ChargingTime = 6
+v1.ChargingShotEnabled = false
+v1.Auto = true
+v1.ExplosiveEnabled = true
+v1.Radius = 100
+v1.Intensity = 5000
+v1.BulletColor = BrickColor.new("Really red")

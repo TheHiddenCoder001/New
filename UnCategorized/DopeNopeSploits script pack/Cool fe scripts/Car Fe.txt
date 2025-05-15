@@ -1,0 +1,3 @@
+--link: https://www.roblox.com/catalog/4585144193/Elitoria-RN750
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/MonkoTubeYT/carscript/master/!carscript.lua',true))()

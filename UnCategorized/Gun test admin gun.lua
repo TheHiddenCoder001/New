@@ -1,0 +1,14 @@
+local v1 = require(game:GetService("Players").SchoolDestroyed.Backpack.M4A1.Setting)
+v1.BaseDamage = 99999
+v1.ReloadTime = 0.45
+v1.HeadShotDamageMultiplier = 1000000000000
+v1.HitSoundVolume = 99999999
+v1.FlamingBullet = true
+v1.DualEnabled = true
+v1.AmmoPerMag = 1000
+v1.CriticalDamageEnabled = true
+v1.LightBrightness = 100
+v1.ExplosiveEnabled = true
+v1.Ammo = 9999
+v1.MaxAmmo = 99999
+v1.LimitedAmmoEnabled = false

@@ -1,0 +1,15 @@
+function fireButton1(button)
+for i,signal in next, getconnections(button.MouseButton1Down) do
+signal:Fire()
+end
+end
+
+while wait(0.1) do
+for i,v in pairs(game.Players.LocalPlayer.PlayerGui.BubbleGuis:GetDescendants()) do
+if v.Name == "ImageButton" then
+if v.Parent.Enabled == true then
+fireButton1(v)
+end
+end
+end
+end

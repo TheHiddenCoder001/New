@@ -1,0 +1,6 @@
+game:GetService("ReplicatedStorage").GiveG:FireServer()
+game:GetService("ReplicatedStorage").GiveB:FireServer()
+game:GetService("ReplicatedStorage").GiveGB:FireServer()
+game:GetService("ReplicatedStorage").GiveMB:FireServer()
+game:GetService("ReplicatedStorage").GiveP:FireServer()
+game:GetService("ReplicatedStorage").GiveS:FireServer()

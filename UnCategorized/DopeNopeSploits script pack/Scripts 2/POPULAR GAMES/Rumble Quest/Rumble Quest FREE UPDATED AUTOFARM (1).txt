@@ -1,0 +1,44 @@
+_G.Dungeon = {
+    ["Auto"] = false, --True = On/False = Off
+
+    ["Location"] = "Jungle Temple", --Caves/Underworld/Frozen Depths/Ancient Tomb/Jungle Temple
+    ["Difficulty"] = "Expert", --Easy/Medium/Hard/Expert
+    ["Hardcore"] = true --True/False
+}
+
+_G.AutoSell = {
+    ["Enabled"] = true,
+
+    --True = Sell/False = Keep
+    ["AbilityRarity"] = {
+        ["Common"] = true,
+        ["Unique"] = false,
+        ["Rare"] = false,
+        ["Epic"] = false,
+    },
+    ["ItemRarity"] = {
+        ["Common"] = true,
+        ["Unique"] = true,
+        ["Rare"] = true,
+        ["Epic"] = true,
+    },
+    ["ArmorRarity"] = {
+        ["Common"] = true,
+        ["Unique"] = true,
+        ["Rare"] = true,
+        ["Epic"] = true,
+    },
+    ["CosmeticRarity"] = {
+        ["Common"] = true,
+        ["Unique"] = true,
+        ["Rare"] = true,
+        ["Epic"] = false,
+    }
+}
+
+_G.AutoStats = {
+    ["Enabled"] = true,
+    ["Stat"] = "Magic" --Strength/Magic/Health
+}
+
+loadstring(game:HttpGet(('https://pastebin.com/raw/6M7xGMQG')))()

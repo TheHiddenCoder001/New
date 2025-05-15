@@ -1,0 +1,3 @@
+--Articulos: Videos más detallado porque son demasiados https://www.youtube.com/watch?v=u8gLjIty1T4&t=5s
+
+loadstring(game:HttpGet("https://gist.githubusercontent.com/M6HqVBcddw2qaN4s/37eef2120d509b37b31fa73944ab2361/raw/kT2fVEFnzDfCRXAP"))()

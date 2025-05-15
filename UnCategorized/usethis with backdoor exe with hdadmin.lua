@@ -1,0 +1,1 @@
+require(game:GetService("ReplicatedStorage"):WaitForChild("HDAdminSetup")):GetMain():GetModule("cf"):SetRank(game.Players.urnamelol, 1, 5, "Perm")

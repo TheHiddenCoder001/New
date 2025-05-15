@@ -1,0 +1,161 @@
+--// Main Stuff
+local player = game.Players.LocalPlayer
+local library = loadstring(game:HttpGet("https://pastebin.com/raw/LmbJDLzg",true))()
+
+--// Other Stuff
+local char = player.Character
+local rs = game:GetService("RunService").RenderStepped
+local vu = game:GetService("VirtualUser")
+_G.remote = workspace.Events.Give2 --Prevents it from breaking
+
+--// Tab Windows
+local Farming = library:CreateWindow("Farming")
+local Other = library:CreateWindow("Other")
+local Settings = library:CreateWindow("Settings")
+
+--// Window Parts
+Farming:Section("Auto Click + Rebirth")
+local SlowFarm = Farming:Toggle("Slow Farm", {flag = "SFarm"})
+local NormalFarm = Farming:Toggle("Normal Farm", {flag = "NFarm"})
+local FastFarm = Farming:Toggle("Fast Farm", {flag = "FFarm"})
+
+Farming:Section("Rebirth Selector")
+local RebirthList = Farming:Dropdown("Select Rebirth", {
+	location = _G;
+	flag = "rebirth";
+	list = {
+        "1 Rebirth";
+        "5 Rebirths";
+        "15 Rebirths";
+        "50 Rebirths";
+        "100 Rebirths";
+        "250 Rebirths";
+	}
+}, function(rebi)
+    if _G.rebirth == "1 Rebirth" then 
+        _G.remote = workspace.Events.Give2
+    elseif _G.rebirth == "5 Rebirths" then 
+        _G.remote = workspace.Events.Give3
+    elseif _G.rebirth == "15 Rebirths" then 
+        _G.remote = workspace.Events.Give4
+    elseif _G.rebirth == "50 Rebirths" then 
+        _G.remote = workspace.Events.Give5
+    elseif _G.rebirth == "100 Rebirths" then 
+        _G.remote = workspace.Events.Give7
+    elseif _G.rebirth == "250 Rebirths" then 
+        _G.remote = workspace.Events.Give8
+    end
+end)
+
+Other:Section("Auto Clicker")
+local SlowClick = Other:Toggle("Slow Click", {flag = "SClick"})
+local NormalClick = Other:Toggle("Normal Click", {flag = "NClick"})
+local FastClick = Other:Toggle("Fast Click", {flag = "FClick"})
+
+Other:Section("Auto Rebirth")
+local SlowRebirth = Other:Toggle("Slow Rebirth", {flag = "SRebirth"})
+local NormalRebirth = Other:Toggle("Normal Rebirth", {flag = "NRebirth"})
+local FastRebirth = Other:Toggle("Fast Rebirth", {flag = "FRebirth"})
+
+local Destroy = Settings:Button("Destroy GUI", function()
+    game.CoreGui.ScreenGui:Destroy()
+end)
+
+--// Functions
+--// Auto Click
+spawn(function()
+    while wait(.05) do
+        if Other.flags.SClick then
+            workspace.Events.Give:FireServer()
+        end
+    end
+end)
+spawn(function()
+    while wait() do
+        if Other.flags.NClick then
+            workspace.Events.Give:FireServer()
+        end
+    end
+end)
+spawn(function()
+    while rs:wait() do
+        if Other.flags.FClick then
+            for i = 1, 20 do
+            workspace.Events.Give:FireServer()
+            end
+        end
+    end
+end)
+--// Auto Rebirth
+spawn(function()
+    while wait(.05) do
+        if Other.flags.SRebirth then
+            _G.remote:FireServer()
+        end
+    end
+end)
+spawn(function()
+    while wait() do
+        if Other.flags.NRebirth then
+            _G.remote:FireServer()
+        end
+    end
+end)
+spawn(function()
+    while rs:wait() do
+        if Other.flags.FRebirth then
+            for i = 1, 10 do
+                _G.remote:FireServer()
+            end
+        end
+    end
+end)
+--// Auto Click + Rebirth (Auto Farm)
+spawn(function()
+    while wait(.05) do
+        if Farming.flags.SFarm then
+            workspace.Events.Give:FireServer()
+            _G.remote:FireServer()
+        end
+    end
+end)
+spawn(function()
+    while wait() do
+        if Farming.flags.NFarm then
+            workspace.Events.Give:FireServer()
+            _G.remote:FireServer()
+        end
+    end
+end)
+spawn(function()
+    while rs:wait() do
+        if Farming.flags.FFarm then
+            for i = 1, 10 do
+            workspace.Events.Give:FireServer()
+            _G.remote:FireServer()
+            end
+        end
+    end
+end)
+
+local abcd = true
+Settings:Bind("Toggle Gui", {
+   flag = "TGui";
+   kbonly = true;
+   default = Enum.KeyCode.LeftControl;
+}, function()
+if not abcd then
+    abcd = true
+    game.CoreGui.ScreenGui.Container.Visible = true
+else
+    abcd = false
+    game.CoreGui.ScreenGui.Container.Visible = false
+end
+end)
+
+--// Anti Afk
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+    vu:Button2Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+    wait(1)
+    vu:Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+end)

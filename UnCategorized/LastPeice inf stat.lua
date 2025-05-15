@@ -1,0 +1,1 @@
+loadstring(game:HttpGet('https://raw.githubusercontent.com/BapakKauNgewe/Last-Piece/main/Last%20Piece%20Inf%20Stats', true))()

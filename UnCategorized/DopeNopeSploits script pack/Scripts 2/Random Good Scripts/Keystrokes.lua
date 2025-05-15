@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Justice219/RBKeystrokes/master/Keystrokes.lua"))()
